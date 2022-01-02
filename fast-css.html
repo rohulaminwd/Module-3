@@ -52,10 +52,50 @@
             margin: 20px;
             padding: 20px;
         }
+
+        /* other section */
+.container{
+  margin-top: 100px;
+}
+.box1{
+    position: relative;
+    margin: 0 auto;
+    width:120px;
+    height: 210px;
+    transform-style: preserve-3d;
+    animation: animate 20s linear infinite;
+  }
+  @keyframes animate{
+    0%{
+      transform: perspective(1000px) rotateY(0deg);
+    }
+    100%{
+      transform: perspective(1000px) rotateY(360deg);
+    }
+  }
+  .box1 span{
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) *45deg)) translateZ(140px);
+    -webkit-box-reflect: below 1px linear-gradient(transparent,transparent,#0006);
+  }
+  .box1 span img{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+  }
     </style>
 </head>
 <body>
-    <h1>this is a second module</h1>
+    <h1>This is a second module</h1>
     <p>this is a Rahul</p>
     <p>ami fuska khaite jabo</p>
     <p>ami akhon gurte jabo</p>
@@ -69,7 +109,7 @@
 
     <!-- block section -->
     <section class="block-section">
-        <h1>Wellcome to my Trabeling block</h1>
+        <h1>Wellcome to my Trabeling blog</h1>
         <div class="block">
             <h3>this is a Traveling section</h3>
             <p>Lorem ipsum dolor sit aatus sapiente saepe sunt nobis repellendus et qui, eaque facere asperiores, voluptate fuga neque ab vero reprehenderit illum. Eveniet esse similique nesciunt dolores veniam libero iusto dolor qui facilis? Officia aspernatur odit ea aliquam fuga, saepe magni.</p>
@@ -86,7 +126,7 @@
 
 
     <section>
-        <h1>video show extention</h1>
+        <h1>HAPPY NEW YEAR</h1>
         <video width="240" height="320" controls>
             <source src="video/bahobali.mp4" type="video/mp4">
             <!-- <source src="bahobali.mp4" type="video/ogg"> -->
@@ -109,5 +149,22 @@
             Your browser does not support the audio element.
         </audio>
     </section>
+
+    <h1>একটু আগলা ফুটানি 😁😎😎</h1>
+
+    <div class="container">
+        <div class="small-container pad">
+            <div class="box1">
+                <span style="--i:1"><img src="image/Rahul.jpg" alt="" /></span>
+                <span style="--i:2"><img src="image/rohul (1).jpg" alt="" /></span>
+                <span style="--i:3"><img src="image/rohul (2).jpg" alt="" /></span>
+                <span style="--i:4"><img src="image/rohul (3).jpg" alt="" /></span>
+                <span style="--i:5"><img src="image/Rahul.jpg" alt="" /></span>
+                <span style="--i:6"><img src="image/rohul (1).jpg" alt="" /></span>
+                <span style="--i:7"><img src="image/rohul (2).jpg" alt="" /></span>
+                <span style="--i:8"><img src="image/rohul (3).jpg" alt="" /></span>
+            </div> 
+        </div>
+    </div>
 </body>
 </html>
